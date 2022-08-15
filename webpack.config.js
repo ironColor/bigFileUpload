@@ -69,5 +69,11 @@ module.exports = {
     open: true,
     hot: true,
     port: 9797,
+  },
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src')
+    },
+    extensions: ['.js', '.jsx', '.ts', '.tsx']
   }
 }
