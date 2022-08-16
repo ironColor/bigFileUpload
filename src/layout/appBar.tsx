@@ -5,27 +5,38 @@ import styled from 'styled-components';
 
 function AppBar() {
   return (
-    <>
-      <ColorText 
-        changeTextArry={['去想', '去做', '去爱!']}
-        fixedText='Hi, bw, '
-      />
-    </>
+    <Nav>
+      <Content>
+        <ColorText 
+          changeTextArry={['去想', '去做', '去爱!']}
+          fixedText='Hi, bro, '
+        />
+        <RightNav> 
+          <span>大文件上传</span>
+        </RightNav>
+      </Content>
+    </Nav>
   )
 }
 
 export default memo(AppBar);
 
-const TextWrap = styled.div`
-  font-family: "SF Pro SC","SF Pro Display","SF Pro Icons","PingFang SC","Helvetica Neue","Helvetica","Arial",sans-serif;
-  font-size: 60px;
-  font-weight: 600;
+const Nav = styled.nav`
+  position: sticky;
+  height: 52px;
+  border-bottom: 1px solid;
 `
 
-const TextArry = styled.span`
-  display: inline-flex;
-  position: relative;
-  min-width: 350px;
-  overflow: hidden;
-  padding-bottom: 15px;
+const Content = styled.div`
+  margin: 0 auto;
+  max-width: 980px;
+  display: flex;
+  justify-content: space-between;
+  
+`
+
+const RightNav = styled.div`
+  display: flex;
+  padding-top: 18px;
+  font-size: 12px;
 `

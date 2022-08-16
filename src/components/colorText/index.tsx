@@ -63,9 +63,10 @@ export default memo(ColorText);
 
 const TextWrap = styled.div`
   font-family: "SF Pro SC","SF Pro Display","SF Pro Icons","PingFang SC","Helvetica Neue","Helvetica","Arial",sans-serif;
-  font-size: 60px;
+  font-size: 21px;
   font-weight: 600;
   display: inline-block;
+  margin: 14px 0 -14px;
 `
 
 const TextArry = styled.span`
