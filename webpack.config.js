@@ -51,6 +51,11 @@ module.exports = {
         test: /\.tsx?$/,
         use: 'ts-loader',
         exclude: /node_modules/,
+      },
+       // Less 配置
+      {
+        test: /.less$/,
+        use: ['style-loader', 'css-loader', 'less-loader']
       }
     ],
   },

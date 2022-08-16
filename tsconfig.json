@@ -1,13 +1,15 @@
-{
+{ 
+  "extends": "./tsconfig.path.json",
   "compilerOptions": {
+    "target": "es5",   // target用来指定 TypeScript 编译代码的目标，不同的目标将影响代码中使用的特性是否会被降级。
+    "module": "esnext", // 选项可以用来设置 TypeScript 代码所使用的模块系统。
     "outDir": "./dist/",
     // "rootDir": "./src",
     "sourceMap": true, // 开启sourcemap
-    "module": "commonjs",
-    "target": "es5",
-    "jsx": "react",
+    "moduleResolution": "node",
+    "jsx": "react-jsx",
     "esModuleInterop": true,
-    "allowJs": true,
-    "strict": true
+    "allowJs": true,  
+    "strict": true // 同时开启一系列的类型检查选项，以便更好地保证程序的正确性。
   }
 }
