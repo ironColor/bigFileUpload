@@ -61,7 +61,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: '大文件切片上传',
+      title: 'bw的奇妙世界',
       template: path.resolve(__dirname, './public/index.html'),
       filename: 'index.html',
     }),
