@@ -1,8 +1,8 @@
 const path = require('path');
 // 用模板生成一个Html文件
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-// 打包前清理 打包目录
-const { CleanWebpackPlugin } = require('clean-webpack-plugin'); 
+// // 打包前清理 打包目录
+// const { CleanWebpackPlugin } = require('clean-webpack-plugin'); 
 // 命令行友好提示
 const friendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
 
@@ -10,7 +10,9 @@ module.exports = {
   entry: './src/index.tsx',
   output: {
     path: path.resolve(__dirname, './dist'),
-    filename: '[name].bundle.js'
+    filename: '[name].bundle.js',
+    // webpack5支持clean属性配置 不需要再去依赖其他plugin配置
+    clean: true, // 清除掉之前的bundle 
   },
   mode: 'development',
   devtool: 'inline-source-map',
@@ -61,11 +63,10 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'bw的奇妙世界',
+      title: '奇妙世界',
       template: path.resolve(__dirname, './public/index.html'),
       filename: 'index.html',
     }),
-    new CleanWebpackPlugin(),
     new friendlyErrorsWebpackPlugin(),
   ],
   devServer: {
