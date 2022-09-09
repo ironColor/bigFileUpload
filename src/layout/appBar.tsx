@@ -1,15 +1,21 @@
 import { memo, useEffect, useRef } from 'react';
 import ColorText from '@/components/colorText';
+import RotateText, { WorldColor } from '@/components/rotateText';
 import styled from 'styled-components';
 
 
 function AppBar() {
+  let changeText: Array<[WorldColor, string]> = [
+    [WorldColor.ALIZARIN, '去想'],
+    [WorldColor.SUNFLOWER, '去做'],
+    [WorldColor.PETERRIVER, '去爱']
+  ]
   return (
     <Nav>
       <Content>
-        <ColorText 
-          changeTextArry={['去想', '去做', '去爱!']}
+        <RotateText 
           fixedText='Hi, bro, '
+          changeText={changeText}
         />
         <RightNav> 
           <span>大文件上传</span>
