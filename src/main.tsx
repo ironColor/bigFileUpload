@@ -11,26 +11,3 @@ export default function Main() {
     </BrowserRouter>
   )
 }
-
-const Home = () => {
-  return (
-    <>
-      这是Home页面
-    </>
-  )
-}
-
-const  First = () => {
-  return (
-    <>
-      这是页面1
-    </>
-  )
-}
-const  Second = () => {
-  return (
-    <>
-      这是页面2
-    </>
-  )
-}

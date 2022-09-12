@@ -18,7 +18,7 @@ function AppBar() {
           changeText={changeText}
         />
         <RightNav> 
-          <span>大文件上传</span>
+          <span>凡是过往，皆为序章</span>
         </RightNav>
       </Content>
     </Nav>

@@ -66,7 +66,6 @@ export default function RotateText({fixedText, changeText}: Iprops) {
         <p>
           {
             changeText.map((item, i) => {
-              console.log('xxxxxxx', item)
               return (
                 <span 
                   key={i} 
