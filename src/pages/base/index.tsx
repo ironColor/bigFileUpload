@@ -1,9 +1,16 @@
-import { useMemo } from "react"
+import { useState } from "react";
+
+
+const CHUNK_SIZE = 1 * 1024 * 1024;
 
 export default function Base() {
 
   const handleFileChange = (e: any) => {
-    console.log('xxxxx', e)
+    const [file] = e.target.files;
+
+    if (!file) return;
+    
+
   }
 
   return (
